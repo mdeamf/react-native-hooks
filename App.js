@@ -7,6 +7,7 @@ import { UseContextComponent } from './src/components/UseContextComponent';
 import { UseEffectCleaningComponent } from './src/components/UseEffectCleaningComponent';
 import { UseEffectComponent } from './src/components/UseEffectComponent';
 import { UseMemoComponent } from './src/components/UseMemoComponent';
+import { UseReducerComponent } from './src/components/UseReducerComponent';
 import { UseRefComponent } from './src/components/UseRefComponent';
 
 export default function App() {
@@ -19,12 +20,14 @@ export default function App() {
       {/* <UseMemoComponent /> */}
 
       {/* <UseCallbackComponent /> */}
-      
+
       {/* <UseRefComponent /> */}
 
-      <UseContextComponent>
+      {/* <UseContextComponent>
         <UseContextChildComponent />
-      </UseContextComponent>
+      </UseContextComponent> */}
+
+      <UseReducerComponent />
       <StatusBar style="auto" />
     </View>
   );
