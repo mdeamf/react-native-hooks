@@ -15,7 +15,7 @@ export const UseEffectComponent = () => {
   });
 
   useEffect(() => {
-    console.log(LOG, 'isHappy updated');
+    console.log(LOG, 'isHappy updated', isHappy);
   }, [isHappy]);
 
   return (
