@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { UseCallbackComponent } from './src/components/UseCallbackComponent';
 import { UseEffectCleaningComponent } from './src/components/UseEffectCleaningComponent';
 import { UseEffectComponent } from './src/components/UseEffectComponent';
 import { UseMemoComponent } from './src/components/UseMemoComponent';
@@ -12,7 +13,9 @@ export default function App() {
 
       {/* <UseEffectCleaningComponent /> */}
 
-      <UseMemoComponent />
+      {/* <UseMemoComponent /> */}
+
+      <UseCallbackComponent />
       <StatusBar style="auto" />
     </View>
   );
