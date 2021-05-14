@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { UseCallbackComponent } from './src/components/UseCallbackComponent';
+import { UseContextChildComponent } from './src/components/UseContextChildComponent';
+import { UseContextComponent } from './src/components/UseContextComponent';
 import { UseEffectCleaningComponent } from './src/components/UseEffectCleaningComponent';
 import { UseEffectComponent } from './src/components/UseEffectComponent';
 import { UseMemoComponent } from './src/components/UseMemoComponent';
@@ -18,7 +20,11 @@ export default function App() {
 
       {/* <UseCallbackComponent /> */}
       
-      <UseRefComponent />
+      {/* <UseRefComponent /> */}
+
+      <UseContextComponent>
+        <UseContextChildComponent />
+      </UseContextComponent>
       <StatusBar style="auto" />
     </View>
   );
