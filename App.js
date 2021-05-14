@@ -5,6 +5,7 @@ import { UseCallbackComponent } from './src/components/UseCallbackComponent';
 import { UseEffectCleaningComponent } from './src/components/UseEffectCleaningComponent';
 import { UseEffectComponent } from './src/components/UseEffectComponent';
 import { UseMemoComponent } from './src/components/UseMemoComponent';
+import { UseRefComponent } from './src/components/UseRefComponent';
 
 export default function App() {
   return (
@@ -15,7 +16,9 @@ export default function App() {
 
       {/* <UseMemoComponent /> */}
 
-      <UseCallbackComponent />
+      {/* <UseCallbackComponent /> */}
+      
+      <UseRefComponent />
       <StatusBar style="auto" />
     </View>
   );
