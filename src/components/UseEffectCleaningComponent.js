@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Text } from 'react-native';
 
-const LOG = '[USE EFFECT COMPONENT]';
+const LOG = '[USE EFFECT CLEANING COMPONENT]';
 
 export const UseEffectCleaningComponent = () => {
   const [isSad, setIsSad] = useState(0);
