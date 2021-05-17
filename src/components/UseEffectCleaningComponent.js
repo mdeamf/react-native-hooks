@@ -19,6 +19,8 @@ export const UseEffectCleaningComponent = () => {
 
   useEffect(() => {
     console.log(LOG, 'mounted');
+
+    return () => console.log(LOG, 'unmounted');
   }, []);
 
   useEffect(() => {

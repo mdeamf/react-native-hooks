@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import { UseCallbackComponent } from './src/components/UseCallbackComponent';
 import { UseContextChildComponent } from './src/components/UseContextChildComponent';
 import { UseContextComponent } from './src/components/UseContextComponent';
@@ -11,11 +11,16 @@ import { UseReducerComponent } from './src/components/UseReducerComponent';
 import { UseRefComponent } from './src/components/UseRefComponent';
 
 export default function App() {
+  const [showUseEffectCleaning, setShowUseEffectCleaning] = useState(true);
   return (
     <View style={styles.container}>
       {/* <UseEffectComponent /> */}
 
-      {/* <UseEffectCleaningComponent /> */}
+      {showUseEffectCleaning && <UseEffectCleaningComponent />}
+      <Button
+        title={showUseEffectCleaning ? 'Remover Comp' : 'Exibir Comp'}
+        onPress={() => setShowUseEffectCleaning(!showUseEffectCleaning)}
+      />
 
       {/* <UseMemoComponent /> */}
 
@@ -27,7 +32,7 @@ export default function App() {
         <UseContextChildComponent />
       </UseContextComponent> */}
 
-      <UseReducerComponent />
+      {/* <UseReducerComponent /> */}
       <StatusBar style="auto" />
     </View>
   );
