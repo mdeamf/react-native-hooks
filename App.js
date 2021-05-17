@@ -16,13 +16,13 @@ export default function App() {
     <View style={styles.container}>
       {/* <UseEffectComponent /> */}
 
-      {showUseEffectCleaning && <UseEffectCleaningComponent />}
+      {/* {showUseEffectCleaning && <UseEffectCleaningComponent />}
       <Button
         title={showUseEffectCleaning ? 'Remover Comp' : 'Exibir Comp'}
         onPress={() => setShowUseEffectCleaning(!showUseEffectCleaning)}
-      />
+      /> */}
 
-      {/* <UseMemoComponent /> */}
+      <UseMemoComponent />
 
       {/* <UseCallbackComponent /> */}
 
