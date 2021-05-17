@@ -5,7 +5,7 @@ const LOG = '[USE MEMO COMPONENT]';
 
 export const UseMemoComponent = () => {
   const [number, setNumber] = useState(1);
-  const [anoterNumber, setAnoterNumber] = useState(1);
+  const [anotherNumber, setAnotherNumber] = useState(1);
 
   useEffect(() => {
     console.log(LOG, 'useEffect mounted');
@@ -26,7 +26,7 @@ export const UseMemoComponent = () => {
 
   const randomNumber = Math.random().toFixed(5);
 
-  const randomNumberMemo = useMemo(() => Math.random().toFixed(5), []);
+  const randomNumberMemo = useMemo(() => Math.random().toFixed(5), [anotherNumber]);
 
   return (
     <>
@@ -37,12 +37,12 @@ export const UseMemoComponent = () => {
       </View>
 
       <View>
-        <Text>Another Number: {anoterNumber}</Text>
+        <Text>Another Number: {anotherNumber}</Text>
         <Text>Random Number Not Memoized: {randomNumber}</Text>
         <Text>Random Number Memoized: {randomNumberMemo}</Text>
         <Button
           title="Add Another Number"
-          onPress={() => setAnoterNumber(anoterNumber + 1)}
+          onPress={() => setAnotherNumber(anotherNumber + 1)}
         />
       </View>
     </>
